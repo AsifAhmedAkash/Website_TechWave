@@ -8,7 +8,7 @@
     <title>TechWave</title>
 </head>
 
-<body class="bg-[#1A0B2E]">
+<body class="bg-[#1A0B2E] text-white">
     <!-- <h1>this is techwave website test</h1> -->
     <header class="w-40/44 sm:w-3/4 py-4 mx-auto flex justify-between items-center bg-[#1A0B2E]">
         <div>
@@ -41,9 +41,40 @@
 
     <main>
         <section>
-            <div class="bg-[url('assets/hero-bg.png')] h-full">
+            <div class="bg-[url('assets/hero-bg.png')] h-full bg-center bg-no-repeat bg-cover flex items-center">
+                <div class="w-40/44 sm:w-3/4 py-20 mx-auto flex flex-col gap-8 justify-center items-center">
+                    <div class="w-65 h-65 rounded-full bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] 
+            border-4 border-[#2A186C] flex items-center justify-center mx-auto">
+                        <img class="w-3/7 h-auto p-2" src="assets/microphone.png" alt="Microphone">
+                    </div>
 
-            </div>
+
+
+                    <div class="w-190 mx-auto flex flex-col gap-6 text-center">
+                        <h1 class="text-6xl font-bold">
+                            TechWave
+                        </h1>
+                        <p class="text-[16]">Your daily dose of tech insights, productivity hacks, and personal growth
+                        </p>
+                        <div class="flex justify-center">
+                            <button class="flex items-center gap-2 bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] 
+         text-white px-4 py-2 rounded-full 
+         hover:from-[#9100F8] hover:via-[#FB09B4] hover:to-[#F7E93F] 
+         transition-all duration-300">
+                                <img src="assets/spotify.png" alt="">
+                                <p>Listen on Spotify</p>
+                            </button>
+                            <button class="flex items-center gap-2 bg-transparent border-2 border-[#00FF88] ml-4 
+         text-white px-4 py-2 rounded-full 
+         hover:border-white hover:text-white
+         transition-all duration-300">
+                                <img src="assets/message.png" alt="">
+                                <p class="text-[#00FF88]">Subscribe</p>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
 
         </section>
 
