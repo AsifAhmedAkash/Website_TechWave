@@ -10,6 +10,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <style>
+        .hover-scale:hover {
+            transform: scale(1.25);
+            cursor: pointer;
+        }
+    </style>
+
     <title>TechWave</title>
 </head>
 
@@ -21,16 +28,16 @@
         </div>
         <div class="hidden sm:block">
             <ul class="text-white flex gap-4">
-                <li>About</li>
-                <li>Episods</li>
-                <li>Host</li>
+                <li class="hover-scale" style="transition: transform 0.2s ease;">About</li>
+                <li class="hover-scale" style="transition: transform 0.2s ease;">Episods</li>
+                <li class="hover-scale" style="transition: transform 0.2s ease;">Host</li>
             </ul>
         </div>
         <div class="hidden sm:block">
             <button class="bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] 
          text-white px-4 py-2 rounded-full 
          hover:from-[#9100F8] hover:via-[#FB09B4] hover:to-[#F7E93F] 
-         transition-all duration-300">
+         transition-all duration-300 hover-scale" style="transition: transform 0.2s ease">
                 Subscribe
             </button>
 
@@ -48,7 +55,7 @@
         <!-- bannar -->
         <section>
             <div class="bg-[url('assets/hero-bg.png')]  bg-center bg-no-repeat bg-cover 
-              flex items-center justify-center text-center ">
+              flex items-center justify-center text-center">
                 <div
                     class="w-full sm:w-3/4 py-10 sm:py-20 mx-auto flex flex-col gap-8 justify-center items-center transform-[translateY(5%)] sm:transform-[translateY(0%)]">
 
@@ -57,10 +64,11 @@
             bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] 
             border-4 border-[#2A186C] flex items-center justify-center mx-auto">
 
-                        <!-- Microphone stays centered -->
-                        <img class="w-16 sm:w-3/7 h-auto p-2" src="assets/microphone.png" alt="Microphone">
+                        <!-- mircrophone -->
+                        <img style="transition: transform 0.2s ease;" class="w-16 sm:w-3/7 h-auto p-2 hover-scale"
+                            src="assets/microphone.png" alt="Microphone">
 
-                        <!-- Badge floats outside -->
+                        <!-- new Badge -->
                         <div class="absolute -top-1 -right-[3px] sm:-top-1 sm:-right-[-33px] bg-green-500 text-white text-xs font-bold 
                         px-2 py-1 rounded-full shadow-md">
                             NEW
@@ -82,7 +90,7 @@
                             <button class="flex items-center gap-2 bg-gradient-to-tr from-[#F7E93F] via-[#FB09B4] to-[#9100F8] 
                       text-white px-4 py-2 rounded-full 
                       hover:from-[#9100F8] hover:via-[#FB09B4] hover:to-[#F7E93F] 
-                      transition-all duration-300">
+                      transition-all duration-300 hover-scale" style="transition: transform 0.2s ease">
                                 <img src="assets/spotify.png" alt="">
                                 <p>Listen on Spotify</p>
                             </button>
@@ -90,7 +98,7 @@
                             <button class="flex items-center gap-2 bg-transparent border-2 border-[#00FF88] 
                       text-white px-4 py-2 rounded-full 
                       hover:border-white hover:text-white
-                      transition-all duration-300">
+                      transition-all duration-300 hover-scale" style="transition: transform 0.2s ease">
                                 <img src="assets/message.png" alt="">
                                 <p class="text-[#00FF88]">Subscribe</p>
                             </button>
@@ -101,7 +109,7 @@
         </section>
 
         <!-- //podcast section -->
-        <section class=" py-12 w-8/9 sm:w-3/4 mx-auto">
+        <section class="py-10 sm:py-12 w-8/9 sm:w-3/4 mx-auto">
             <div>
                 <h1 class="text-4xl font-bold text-center">
                     About The Podcast
@@ -118,12 +126,12 @@
             </div>
 
             <!-- hr with width 1200px -->
-            <hr class="border-white opacity-10 mt-20 mx-auto">
+            <hr class="border-white opacity-10 mt-10 sm:mt-20 mx-auto">
 
 
 
             <!-- cards container -->
-            <div class="grid gap-20 justify-center items-center mt-20 grid-cols-2 sm:grid-cols-4">
+            <div class="grid gap-10 sm:gap-20 justify-center items-center mt-10 sm:mt-20 grid-cols-2 sm:grid-cols-4">
                 <!-- cards   -->
                 <div class="text-center">
                     <h2 class="text-[#00FF88] text-5xl font-bold">150K+</h2>
@@ -148,36 +156,38 @@
 
 
         <!-- //why choose techwave  -->
-        <section class="py-30 w-8/9 sm:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-3 auto-rows-auto gap-4 sm:gap-10">
-            <div
-                class="px-6 py-10 bg-[#230E3D] rounded-[40px] sm:col-span-1 sm:row-span-2 flex flex-col items-baseline justify-center">
+        <section
+            class="py-10 sm:py-30 w-8/9 sm:w-3/4 mx-auto grid grid-cols-1 sm:grid-cols-3 auto-rows-auto gap-4 sm:gap-10">
+            <div class="px-6 py-6 sm:py-10 bg-[#230E3D] rounded-[40px] sm:col-span-1 sm:row-span-2 flex flex-col items-baseline justify-center hover-scale"
+                style="transition: transform 0.2s ease">
                 <img src="assets/headphone.png" alt="">
                 <h3 class="font-bold text-2xl my-4">Premium Audio Quality</h3>
                 <p class="text-[16px]">Experience crystal-clear sound with professional-grade recording equipment and
                     expert audio
                     engineering. Every episode is mastered for optimal listening across all devices and platforms.</p>
             </div>
-            <div
-                class="px-6 py-10 bg-[#230E3D] rounded-[40px] sm:col-span-2 sm:row-span-1 flex flex-col items-baseline justify-center">
+            <div class="px-6 py-6 sm:py-10 bg-[#230E3D] rounded-[40px] sm:col-span-2 sm:row-span-1 flex flex-col items-baseline justify-center hover-scale"
+                style="transition: transform 0.2s ease">
                 <img src="assets/device.png" alt="">
                 <h3 class="font-bold text-2xl my-4">Mobile Friendly</h3>
                 <p class="text-[16px]">Listen on the go with seamless mobile experience and offline downloads.</p>
             </div>
-            <div
-                class="px-6 py-10 bg-[#230E3D] rounded-[40px] sm:col-span-2 sm:row-span-1 flex flex-col items-baseline justify-center">
+            <div class="px-6 py-6 sm:py-10 bg-[#230E3D] rounded-[40px] sm:col-span-2 sm:row-span-1 flex flex-col items-baseline justify-center hover-scale"
+                style="transition: transform 0.2s ease">
                 <img src="assets/location.png" alt="">
                 <h3 class="font-bold text-2xl my-4">Global Community</h3>
                 <p class="text-[16px]">Connect with tech enthusiasts from over 120 countries worldwide.</p>
             </div>
-            <div
-                class="px-6 py-10 bg-[#230E3D] rounded-[40px] sm:col-span-2 sm:row-span-1 flex flex-col items-baseline justify-center">
+            <div class="px-6 py-6 sm:py-10 bg-[#230E3D] rounded-[40px] sm:col-span-2 sm:row-span-1 flex flex-col items-baseline justify-center hover-scale"
+                style="transition: transform 0.2s ease">
                 <img src="assets/zap-fast.png" alt="">
                 <h3 class="font-bold text-2xl my-4">Exclusive Interviews</h3>
                 <p class="text-[16px]">Get unprecedented access to industry titans, startup founders, and tech
                     visionaries. Our host secures exclusive conversations you won't find anywhere else, diving deep into
                     their journeys, failures, and success strategies.</p>
             </div>
-            <div class="px-6 py-10 bg-[#230E3D] rounded-[40px] flex flex-col items-baseline justify-center">
+            <div class="px-6 py-6 sm:py-10 bg-[#230E3D] rounded-[40px] flex flex-col items-baseline justify-center hover-scale"
+                style="transition: transform 0.2s ease">
                 <img src="assets/book-open-01.png" alt="">
                 <h3 class="font-bold text-2xl my-4">Rich Resources</h3>
                 <p class="text-[16px]">Access show notes, transcripts, and additional learning materials for every
@@ -186,19 +196,19 @@
         </section>
 
         <!-- Featured episodes   -->
-        <section class="py-30 w-8/9 sm:w-3/4 mx-auto ">
-            <h1 class="text-center font-bold text-5xl pb-10">Featured Episodes</h1>
+        <section class="py-10 sm:py-30 w-8/9 sm:w-3/4 mx-auto ">
+            <h1 class="text-center font-bold text-5xl pb-6 sm:pb-10">Featured Episodes</h1>
             <!-- //cards container  -->
             <div class="flex sm:flex-row flex-col sm:gap-7 gap-3 justify-center items-center">
                 <!-- //cards  -->
-                <div class="rounded-[20px] bg-[#230E3D] ">
+                <div class="rounded-[20px] bg-[#230E3D] hover-scale" style="transition: transform 0.2s ease;">
                     <iframe width="100%" height="auto"
                         src="https://www.youtube.com/embed/8UYbUsfbBW0?si=wde37Q9tsLbUwclJ" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                    <div class="p-6">
+                    <div class="p-4 sm:p-6">
                         <h3 class="font-bold text-2xl">The Future of AI in Everyday Life</h3>
                         <p class="font-light text-[16px] mt-3">Exploring how artificial intelligence is transforming our
                             daily routines
@@ -213,42 +223,36 @@
                     </div>
 
                 </div>
-                <div class="rounded-[20px] bg-[#230E3D] ">
+                <div class="rounded-[20px] bg-[#230E3D] hover-scale" style="transition: transform 0.2s ease;">
                     <iframe width="100%" height="auto"
-                        src="https://www.youtube.com/embed/8UYbUsfbBW0?si=wde37Q9tsLbUwclJ" title="YouTube video player"
+                        src="https://www.youtube.com/embed/3GU7nAuchKA?si=6J5oEjLhFjnKlTvk" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
                     <div class="p-6">
-                        <h3 class="font-bold text-2xl">The Future of AI in Everyday Life</h3>
-                        <p class="font-light text-[16px] mt-3">Exploring how artificial intelligence is transforming our
-                            daily routines
-                            and what to expect
-                            in
-                            the next decade.</p>
+                        <h3 class="font-bold text-2xl">Building Better Habits for Remote Work</h3>
+                        <p class="font-light text-[16px] mt-3">Practical strategies for staying productive and
+                            maintaining work-life balance in a remote environment.</p>
 
                         <div class="flex pt-3 justify-baseline items-center gap-2">
                             <img class="h-full" src="assets/clock.png" alt="">
-                            <p class="text-[#00FF88] ">42 min</p>
+                            <p class="text-[#00FF88] ">35 min</p>
                         </div>
                     </div>
 
                 </div>
-                <div class="rounded-[20px] bg-[#230E3D] ">
+                <div class="rounded-[20px] bg-[#230E3D] sm:hover-scale" style="transition: transform 0.2s ease;">
                     <iframe width="100%" height="auto"
-                        src="https://www.youtube.com/embed/8UYbUsfbBW0?si=wde37Q9tsLbUwclJ" title="YouTube video player"
+                        src="https://www.youtube.com/embed/fZmQ_aPXJAM?si=-0Z4LHbJ91tuLomI" title="YouTube video player"
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
                     <div class="p-6">
-                        <h3 class="font-bold text-2xl">The Future of AI in Everyday Life</h3>
-                        <p class="font-light text-[16px] mt-3">Exploring how artificial intelligence is transforming our
-                            daily routines
-                            and what to expect
-                            in
-                            the next decade.</p>
+                        <h3 class="font-bold text-2xl">Career Growth in Tech: A Roadmap</h3>
+                        <p class="font-light text-[16px] mt-3">Expert advice on navigating your tech career from junior
+                            developer to senior leadership roles.</p>
 
                         <div class="flex pt-3 justify-baseline items-center gap-2">
                             <img class="h-full" src="assets/clock.png" alt="">
@@ -261,14 +265,14 @@
         </section>
 
         <!-- meet the host  -->
-        <section class="py-30 w-8/9 sm:w-3/4 mx-auto">
-            <h2 class="text-center font-bold text-5xl pb-10">Meet The Host</h2>
+        <section class="pt-5 sm:py-30 w-8/9 sm:w-3/4 mx-auto">
+            <h2 class="text-center font-bold text-5xl pb-6 sm:pb-10">Meet The Host</h2>
 
 
-            <div class="rounded-[20px] bg-[#230E3D]">
+            <div class="rounded-[20px] bg-[#230E3D] hover-scale" style="transition: transform 0.2s ease;">
                 <!-- host content  -->
 
-                <div class="flex justify-center items-center flex-col sm:flex-row p-10 gap-6">
+                <div class="flex justify-center items-center flex-col sm:flex-row p-6 sm:p-10 gap-6">
                     <img class="h-full" src="assets/host.png" alt="">
                     <div class="flex flex-col items-center sm:items-baseline justify-baseline sm:justify-center">
                         <h3 class="font-bold text-2xl mb-4">Alex Kumar</h3>
@@ -282,20 +286,20 @@
                             to
                             grow in tech.</p>
                         <div class="mt-4 flex gap-2">
-                            <div
-                                class="border border-[#533C72] rounded-full w-10 h-10 flex items-center justify-center">
+                            <div class="border border-[#533C72] rounded-full w-10 h-10 flex items-center justify-center hover-scale"
+                                style="transition: transform 0.2s ease">
                                 <img class="p-2.5" src="assets/linkedin.png" alt="">
                             </div>
-                            <div
-                                class="border border-[#533C72] rounded-full w-10 h-10 flex items-center justify-center">
+                            <div class="border border-[#533C72] rounded-full w-10 h-10 flex items-center justify-center hover-scale"
+                                style="transition: transform 0.2s ease">
                                 <img class="p-2.5" src="assets/x.png" alt="">
                             </div>
-                            <div
-                                class="border border-[#533C72] rounded-full w-10 h-10 flex items-center justify-center">
+                            <div class="border border-[#533C72] rounded-full w-10 h-10 flex items-center justify-center hover-scale"
+                                style="transition: transform 0.2s ease">
                                 <img class="p-2.5" src="assets/instagram.png" alt="">
                             </div>
-                            <div
-                                class="border border-[#533C72] rounded-full w-10 h-10 flex items-center justify-center">
+                            <div class="border border-[#533C72] rounded-full w-10 h-10 flex items-center justify-center hover-scale"
+                                style="transition: transform 0.2s ease">
                                 <img class="p-2.5" src="assets/youtube.png" alt="">
                             </div>
 
@@ -308,24 +312,31 @@
 
         <!-- techwave footer  -->
         <footer class="bg-[url('assets/footer-bg.png')]  bg-center bg-no-repeat bg-cover 
-              flex items-center justify-center text-center">
+              flex items-center justify-center text-center mt-10 sm:mt-0">
             <div class="py-10 sm:py-30 px-5 flex flex-col gap-8 justify-center items-center ">
                 <img class="w-1/2 h-auto" src="assets/TechWave.png" alt="">
 
                 <div class="flex flex-wrap gap-8 sm:gap-10 justify-center items-center">
-                    <div class="flex gap-2 justify-center items-center">
+
+
+                    <div class="flex gap-2 justify-center items-center hover-scale"
+                        style="transition: transform 0.2s ease">
                         <img class="h-full" src="assets/spotify.png" alt="">
                         <p>Spotify</p>
                     </div>
-                    <div class="flex  gap-2 justify-center items-center">
+
+                    <div class="flex  gap-2 justify-center items-center hover-scale"
+                        style="transition: transform 0.2s ease">
                         <img class="h-full" src="assets/apple-podcast.png" alt="">
                         <p>Apple Podcasts</p>
                     </div>
-                    <div class="flex  gap-2 justify-center items-center">
+                    <div class="flex  gap-2 justify-center items-center hover-scale"
+                        style="transition: transform 0.2s ease">
                         <img class="h-full" src="assets/youtube-podcast.png" alt="">
                         <p>YouTube</p>
                     </div>
-                    <div class="flex  gap-2 justify-center items-center">
+                    <div class="flex  gap-2 justify-center items-center hover-scale"
+                        style="transition: transform 0.2s ease">
                         <img class="h-full" src="assets/twitter.png" alt="">
                         <p>Twitter</p>
                     </div>
